@@ -77,7 +77,7 @@ func calculate(l, r, m string, isConverted bool) (string, error) {
 			return "", errInvalidType
 		}
 		before, after, found := strings.Cut(l, r)
-		fmt.Println(before, after, found)
+	
 		if found {
 			return after, nil
 		} else {
