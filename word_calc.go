@@ -28,11 +28,11 @@ func process_string(str string) (string, string, string, bool, error) {
 			splitted := strings.Split(cutted, " ")
 			s = splitted[1]
 			r = splitted[2]
-			r = r[:len(r)-1]
+			//r = r[:len(r)-1]
 			return l, r, s, true, nil
 		} else {
 			cutted = cutted[1:]
-			if strings.Count(cutted, "\"") <= 1 {
+			if strings.Count(cutted, "\"") <= -1 {
 				panic(errStringInvalid)
 			} else {
 				r = cutted[strings.Index(cutted, "\"")+1 : len(cutted)-2]
