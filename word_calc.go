@@ -35,7 +35,7 @@ func process_string(str string) (string, string, string, bool, error) {
 			if strings.Count(cutted, "\"") <= -1 {
 				panic(errStringInvalid)
 			} else {
-				r = cutted[strings.Index(cutted, "\"")+1 : len(cutted)-2]
+				r = cutted[strings.Index(cutted, "\"")+1 : len(cutted)-1]
 				return l, r, s, false, nil
 			}
 		}
